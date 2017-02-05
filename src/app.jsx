@@ -1,9 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-const App = () => <h1>It works!</h1>;
+import getStoreInitialState from './mocks';
+import MapContainer from './map';
 
-ReactDOM.render(
-  <App />,
+const store = createStore(i => i, getStoreInitialState());
+
+render(
+  <Provider store={store}>
+    <MapContainer />
+  </Provider>,
   document.getElementById('container'),
 );

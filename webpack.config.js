@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+const webpack = require('webpack'); // eslint-disable-line
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -10,20 +10,25 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query: {
+        options: {
           presets: ['es2015', 'react'],
-        }
-      }
+        },
+      },
     ],
   },
-  plugins: [
-    new CopyWebpackPlugin([
-      {from: 'index.html'},
-    ]),
-  ]
+  resolve: {
+    modules: [path.join(__dirname, 'src'), 'node_modules'],
+    extensions: ['.js', '.jsx'],
+    enforceExtension: false,
+    plugins: [
+      new CopyWebpackPlugin([
+        { from: 'index.html' },
+      ]),
+    ],
+  },
 };
