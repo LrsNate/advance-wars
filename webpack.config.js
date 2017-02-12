@@ -16,6 +16,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
+          plugins: ['lodash'],
           presets: ['es2015', 'react'],
         },
       },

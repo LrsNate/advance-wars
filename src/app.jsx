@@ -4,13 +4,13 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import getStoreInitialState from './mocks';
-import MapContainer from './map';
+import Map from './map';
 
 const store = createStore(i => i, getStoreInitialState());
 
 render(
   <Provider store={store}>
-    <MapContainer />
+    <Map />
   </Provider>,
   document.getElementById('container'),
 );
