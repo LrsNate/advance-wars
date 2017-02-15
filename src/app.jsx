@@ -3,8 +3,8 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-import getStoreInitialState from './mocks';
-import Map from './map';
+import getStoreInitialState from 'mocks';
+import Map from 'components/Map';
 
 const store = createStore(i => i, getStoreInitialState());
 
