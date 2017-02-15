@@ -4,7 +4,7 @@ const webpack = require('webpack'); // eslint-disable-line
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.jsx',
+  entry: path.join(__dirname, 'src/app.jsx'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -19,6 +19,14 @@ module.exports = {
           plugins: ['lodash'],
           presets: ['es2015', 'react'],
         },
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader?modules' },
+          { loader: 'sass-loader' },
+        ],
       },
     ],
   },
