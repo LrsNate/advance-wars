@@ -5,8 +5,6 @@ import _ from 'lodash';
 import Cell from 'components/Cell';
 import styles from 'styles/Map.scss';
 
-console.log(styles);
-
 const Map = ({ rows, cols }) => {
   const cells = _.range(rows).map((rowId) => {
     const rowCells = _.range(cols).map(colId => <Cell rowId={rowId} colId={colId} key={colId} />);
