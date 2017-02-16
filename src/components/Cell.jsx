@@ -1,7 +1,9 @@
 import React from 'react';
 
+import styles from 'styles/Cell.scss';
+
 const Cell = ({ rowId, colId }) => (
-  <p>{rowId}, {colId}</p>
+  <div className={styles.cell} />
 );
 
 Cell.propTypes = {

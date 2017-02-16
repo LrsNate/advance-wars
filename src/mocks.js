@@ -1,5 +1,5 @@
 export default function getStoreInitialState() {
-  const map = { rows: 4, cols: 5, cells: [] };
+  const map = { rows: 16, cols: 20, cells: [] };
 
   for (let i = 0; i < map.rows; i += 1) {
     map.cells.push([]);

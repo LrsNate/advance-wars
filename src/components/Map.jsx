@@ -8,11 +8,10 @@ import styles from 'styles/Map.scss';
 const Map = ({ rows, cols }) => {
   const cells = _.range(rows).map((rowId) => {
     const rowCells = _.range(cols).map(colId => <Cell rowId={rowId} colId={colId} key={colId} />);
-    return (<div className={styles.row}>{rowCells}</div>);
+    return (<div className={styles.row} key={rowId}>{rowCells}</div>);
   });
   return (
     <div>
-      <h1>It works!</h1>
       <ul>
         <li>{rows} rows</li>
         <li>{cols} cols</li>
