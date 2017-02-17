@@ -4,9 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import getStoreInitialState from 'mocks';
+import reducer from 'reducers';
 import Map from 'components/Map';
 
-const store = createStore(i => i, getStoreInitialState());
+const store = createStore(reducer, getStoreInitialState());
 
 render(
   <Provider store={store}>

@@ -30,8 +30,4 @@ function mapStateToProps(state) {
   return state.map;
 }
 
-function mapDispatchToState(dispatch) {
-  return { foo: dispatch({ type: 'foo' }) };
-}
-
-export default connect(mapStateToProps, mapDispatchToState)(Map);
+export default connect(mapStateToProps)(Map);
