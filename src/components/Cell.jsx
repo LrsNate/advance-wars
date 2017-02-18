@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
+import { activateCell } from 'actions';
 import styles from 'styles/Cell.scss';
 
 const Cell = ({ rowId, colId, isActive, activate }) => {
@@ -28,11 +29,7 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch) {
   return {
     activate: ({ rowId, colId }) => () => {
-      dispatch({
-        type: 'ACTIVATE_CELL',
-        rowId,
-        colId,
-      });
+      dispatch(activateCell(rowId, colId));
     },
   };
 }

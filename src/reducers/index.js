@@ -1,3 +1,5 @@
+import { ACTIVATE_CELL } from 'actions';
+
 function activateCell(state, action) {
   const { rowId, colId } = action;
   return {
@@ -8,7 +10,7 @@ function activateCell(state, action) {
 
 export default function reducer(state, action) {
   switch (action.type) {
-    case 'ACTIVATE_CELL':
+    case ACTIVATE_CELL:
       return activateCell(state, action);
     default:
       return state;
