@@ -1,29 +1,34 @@
 import React from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 
 import { activateCell } from 'actions';
 import styles from 'styles/Cell.scss';
 
-const Cell = ({ rowId, colId, isActive, activate }) => {
-  const classes = classNames(styles.cell, { [styles.active]: isActive });
+const Cell = ({ rowId, colId, state, activate }) => {
+  const classes = classNames(styles.cell, {
+    [styles.active]: state.isActive,
+    [styles.inMovementRange]: state.isInMovementRange,
+  });
   return (
     <div className={classes} onClick={activate({ rowId, colId })} /> // eslint-disable-line
   );
 };
 
+const PropTypes = React.PropTypes;
 Cell.propTypes = {
-  rowId: React.PropTypes.number.isRequired,
-  colId: React.PropTypes.number.isRequired,
-  isActive: React.PropTypes.bool.isRequired,
-  activate: React.PropTypes.func.isRequired,
+  rowId: PropTypes.number.isRequired,
+  colId: PropTypes.number.isRequired,
+  state: PropTypes.shape({
+    isActive: PropTypes.bool.isRequired,
+    isInMovementRange: PropTypes.bool.isRequired,
+  }).isRequired,
+  activate: PropTypes.func.isRequired,
 };
 
 function mapStateToProps(state, ownProps) {
   const { rowId, colId } = ownProps;
-  const isActive = _.isEqual(state.selectedCell, { rowId, colId });
-  return { ...ownProps, isActive };
+  return state.map.cells[rowId][colId];
 }
 
 function mapDispatchToProps(dispatch) {

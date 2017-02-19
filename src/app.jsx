@@ -1,13 +1,22 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import createLogger from 'redux-logger';
+import promise from 'redux-promise';
+import thunk from 'redux-thunk';
 
-import getStoreInitialState from 'mocks';
+import INITIAL_STATE from 'store';
 import reducer from 'reducers';
 import Map from 'components/Map';
 
-const store = createStore(reducer, getStoreInitialState());
+const logger = createLogger();
+
+const store = createStore(
+  reducer,
+  INITIAL_STATE,
+  applyMiddleware(thunk, promise, logger),
+);
 
 render(
   <Provider store={store}>
