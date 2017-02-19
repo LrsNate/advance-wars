@@ -28,7 +28,6 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "node-sass": "^4.5.0",
-    "react-css-components": "^1.0.1",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
