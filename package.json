@@ -1,7 +1,11 @@
 {
   "name": "advance-wars",
   "version": "1.0.0",
-  "description": "",
+  "description": "A React port of Advance Wars 2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LrsNate/advance-wars"
+  },
   "main": "app.jsx",
   "scripts": {
     "start": "webpack-dev-server"
