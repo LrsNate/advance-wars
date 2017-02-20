@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 function getStoreInitialState() {
-  const map = { rows: 16, cols: 20, cells: [], selectedCell: null };
+  const map = { rows: 16, cols: 20, cells: [], cellIsSelected: false };
 
   const cells = _.range(map.rows).map((rowId) => { // eslint-disable-line
     return _.range(map.cols).map(colId => ({
