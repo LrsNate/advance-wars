@@ -1,0 +1,24 @@
+@import '~bootstrap/scss/bootstrap';
+
+.aw-map-row {
+  display: flex;
+}
+
+.aw-map-cell {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #dddddd;
+  margin: 1px 1px 1px 1px;
+}
+
+.selected {
+  border-color: black !important;
+}
+
+.in-range {
+  border-color: blue !important;
+}
+
+.mech {
+  background-color: red;
+}
