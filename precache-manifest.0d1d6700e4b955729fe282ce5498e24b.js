@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "01161fa1ba1e414fac8f399f0595ad76",
+    "revision": "544662cb2a59821c3166d0252ed92059",
     "url": "/advance-wars/index.html"
   },
   {
-    "revision": "b3caa2bf130ff2f8e283",
+    "revision": "c53f4b654e3e2f1b1d7c",
     "url": "/advance-wars/static/css/main.57d5b6f6.chunk.css"
   },
   {
-    "revision": "ec17a1edabb05cf31c01",
-    "url": "/advance-wars/static/js/2.d6d7d075.chunk.js"
+    "revision": "2e797c31b259682cc2cb",
+    "url": "/advance-wars/static/js/2.b716a5f7.chunk.js"
   },
   {
-    "revision": "b3caa2bf130ff2f8e283",
-    "url": "/advance-wars/static/js/main.685087e3.chunk.js"
+    "revision": "c53f4b654e3e2f1b1d7c",
+    "url": "/advance-wars/static/js/main.ce59500d.chunk.js"
   },
   {
     "revision": "3f9d5629a5ec00bb9e6a",
