@@ -66,6 +66,14 @@ function resetMap(map) {
   });
 }
 
+function resetActions(map) {
+  return map.forEach(row => {
+    row.forEach(cell => {
+      cell.actions = null;
+    });
+  });
+}
+
 function selectUnit(map, x, y) {
   return map.forEach(row => {
     row.forEach(cell => {
@@ -96,6 +104,7 @@ function clickCell(map, { row, col }) {
     const cell = map[row][col];
 
     if (cell.inRange) {
+      resetActions(map);
       cell.actions = { move: "Move", cancel: "Cancel" };
     } else {
       resetMap(map);
