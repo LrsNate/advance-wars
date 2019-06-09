@@ -174,7 +174,6 @@ class App extends React.Component {
       produce(({ map }) => {
         const selected = getSelected(map);
         const target = getTarget(map);
-        console.log(selected, target);
 
         if (action === 'move') {
           moveUnit(selected, target);
