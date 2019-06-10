@@ -1,32 +1,27 @@
-import * as _ from "lodash";
 import React from "react";
+import { Button } from "react-bootstrap";
 import { connect } from "react-redux";
-import Cell from "./Cell";
+import Map from "./Map";
 
-function mapStateToProps(state) {
-  return {
-    rows: state.map.length,
-    cols: state.map[0].length
-  };
-}
+export const endTurnType = "game:endTurn";
+
+const mapDispatchToProps = dispatch => ({
+  endTurn: () => dispatch({ type: endTurnType })
+});
 
 class App extends React.Component {
   render() {
-    const { rows } = this.props;
-    return <div>{_.range(rows).map(this.renderRow)}</div>;
-  }
-
-  renderRow = row => {
-    const { cols } = this.props;
-
+    const { endTurn } = this.props;
     return (
-      <div className="aw-map-row" key={row}>
-        {_.range(cols).map(col => (
-          <Cell row={row} col={col} key={`${row}-${col}`} />
-        ))}
+      <div>
+        <Map />
+        <Button onClick={endTurn}>End turn</Button>
       </div>
     );
-  };
+  }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);

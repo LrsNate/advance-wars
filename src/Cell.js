@@ -30,7 +30,7 @@ class Cell extends React.Component {
       classes.push("selected");
     }
     if (cell.unit) {
-      classes.push("mech");
+      classes.push(cell.unit.disabled ? "unit-disabled" : "mech");
     }
     if (cell.inRange) {
       classes.push("in-range");
