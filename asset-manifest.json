@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/advance-wars/static/css/main.57d5b6f6.chunk.css",
-    "main.js": "/advance-wars/static/js/main.ce59500d.chunk.js",
-    "main.js.map": "/advance-wars/static/js/main.ce59500d.chunk.js.map",
+    "main.css": "/advance-wars/static/css/main.4746f165.chunk.css",
+    "main.js": "/advance-wars/static/js/main.74d11e82.chunk.js",
+    "main.js.map": "/advance-wars/static/js/main.74d11e82.chunk.js.map",
     "runtime~main.js": "/advance-wars/static/js/runtime~main.ea568fac.js",
     "runtime~main.js.map": "/advance-wars/static/js/runtime~main.ea568fac.js.map",
-    "static/js/2.b716a5f7.chunk.js": "/advance-wars/static/js/2.b716a5f7.chunk.js",
-    "static/js/2.b716a5f7.chunk.js.map": "/advance-wars/static/js/2.b716a5f7.chunk.js.map",
+    "static/js/2.d3568cbc.chunk.js": "/advance-wars/static/js/2.d3568cbc.chunk.js",
+    "static/js/2.d3568cbc.chunk.js.map": "/advance-wars/static/js/2.d3568cbc.chunk.js.map",
     "index.html": "/advance-wars/index.html",
-    "precache-manifest.0d1d6700e4b955729fe282ce5498e24b.js": "/advance-wars/precache-manifest.0d1d6700e4b955729fe282ce5498e24b.js",
+    "precache-manifest.5ad6f6fb811fe098d6f35e0ab114b41b.js": "/advance-wars/precache-manifest.5ad6f6fb811fe098d6f35e0ab114b41b.js",
     "service-worker.js": "/advance-wars/service-worker.js",
-    "static/css/main.57d5b6f6.chunk.css.map": "/advance-wars/static/css/main.57d5b6f6.chunk.css.map"
+    "static/css/main.4746f165.chunk.css.map": "/advance-wars/static/css/main.4746f165.chunk.css.map"
   }
 }

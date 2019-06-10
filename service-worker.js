@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/advance-wars/precache-manifest.0d1d6700e4b955729fe282ce5498e24b.js"
+  "/advance-wars/precache-manifest.5ad6f6fb811fe098d6f35e0ab114b41b.js"
 );
 
 self.addEventListener('message', (event) => {
